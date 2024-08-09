@@ -1,0 +1,10 @@
+footer {
+  display: flex;
+  height: fit-content;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 25px;
+  text-align: center;
+  bottom: 10px;
+  align-self: center;
+}

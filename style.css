@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Playwrite+AR:wght@100..400&family=Raleway:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+body {
+  background: linear-gradient(
+    90deg,
+    rgba(189, 97, 234, 1) 0%,
+    rgba(255, 213, 116, 1) 50%,
+    rgba(221, 103, 165, 1) 100%
+  );
+  font-family: 'Raleway';
+  font-weight: lighter;
+  color: rgb(0, 0, 0);
+  display: flex;
+  height: 98vh;
+  justify-content: center;
+  align-items: center;
+}

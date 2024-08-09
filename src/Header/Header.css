@@ -1,0 +1,15 @@
+header {
+  display: flex;
+  height: 100px;
+  padding: 30px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+header > p {
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  max-width: 600px;
+}
