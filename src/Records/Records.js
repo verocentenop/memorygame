@@ -17,7 +17,6 @@ export const guardarRecords = (timer, movimientos) => {
     updated = true
   }
 
-  // Emitir un evento personalizado si los records fueron actualizados
   if (updated) {
     const event = new CustomEvent('recordsUpdated', {
       detail: {
@@ -47,17 +46,16 @@ export const printRecords = () => {
     <p>Record de Movimientos: ${recordMovimientos}</p>
   `
 
-  // Escuchar el evento personalizado para actualizar los records en tiempo real
   window.addEventListener('recordsUpdated', (e) => {
     const { username, tiempo, movimientos } = e.detail
+    const tiempoUsado = 60 - tiempo
 
-    // Actualizar los valores en pantalla
     document.querySelector(
       '#usernameDisplay'
     ).textContent = `Usuario: ${username}`
     recordsContainer.innerHTML = `
       <h4 id="usernameDisplay">Usuario: ${username}</h4>
-      <p>Record de Tiempo: ${tiempo} segundos</p>
+      <p>Record de Tiempo: ${tiempoUsado} segundos</p>
       <p>Record de Movimientos: ${movimientos}</p>
     `
   })
