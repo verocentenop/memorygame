@@ -1,6 +1,7 @@
 import './Cartas.css'
 import { arrayCartas } from './ArrayCartas'
 import { funcionality } from '../Funcionality/Funcionality'
+import { printRecords } from '../Records/Records'
 
 export const printCartas = () => {
   const appContainer = document.querySelector('#app')
@@ -38,10 +39,16 @@ export const printCartas = () => {
   const otraVez = document.createElement('button')
   otraVez.textContent = 'Volver a jugar'
   otraVez.className = 'button button-again'
+  const records = document.createElement('section')
+  records.className = 'records'
+  records.id = 'records' // Añadimos un id para fácil acceso
 
   marcadores.append(aciertos, tiempo, movimientos)
   botones.append(inicio, otraVez)
-  main.append(cardSection, marcadores, ganador, botones)
+  main.append(cardSection, marcadores, records, ganador, botones)
   appContainer.append(main)
+
   funcionality()
+
+  printRecords()
 }
