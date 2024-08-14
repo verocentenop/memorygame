@@ -3,6 +3,7 @@
   width: 99svw;
   height: 99svh;
   flex-direction: column;
+  background-image: url('https://i.gifer.com/origin/6a/6ab1c5cd94167b97355bd46969d3def1_w200.webp');
 }
 main {
   margin: auto;
