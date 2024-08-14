@@ -1,5 +1,5 @@
 import './Funcionality.css'
-import { arrayCartas } from '../Cartas/ArrayCartas'
+import { guardarRecords } from '../Records/Records.js'
 
 export const funcionality = () => {
   let cartasAbiertas = 0
@@ -45,7 +45,6 @@ export const funcionality = () => {
       contarTiempo()
       temporizador = true
     }
-
     if (cartasAbiertas === 0) {
       cartasAbiertas++
       carta1 = carta
@@ -69,6 +68,7 @@ export const funcionality = () => {
           clearInterval(tiempoRestante)
           mostrarTiempo.innerHTML = `Lo lograste en: ${60 - timer} segundos`
           mostrarMovimientos.innerHTML = `Movimientos: ${movimientos}`
+          guardarRecords(timer, movimientos)
           mostrarGanador()
         }
         cartasAbiertas = 0
@@ -85,12 +85,14 @@ export const funcionality = () => {
       }
     }
   }
+
   const deshabilitarCartas = (deshabilitar) => {
     const allCartas = document.querySelectorAll('.card-container')
     allCartas.forEach((carta) => {
       carta.style.pointerEvents = deshabilitar ? 'none' : 'auto'
     })
   }
+
   const mostrarGanador = () => {
     ganadorMensaje.style.display = 'block'
     otraVezBtn.style.display = 'inline-block'
