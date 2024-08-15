@@ -36,6 +36,11 @@ export const printCartas = () => {
   const inicio = document.createElement('button')
   inicio.textContent = 'Inicio'
   inicio.className = 'button'
+const inicioHref = 'https://vc-games.netlify.app/'
+  inicio.onclick = () => {
+    window.location.href = inicioHref
+  }
+  
   const otraVez = document.createElement('button')
   otraVez.textContent = 'Volver a jugar'
   otraVez.className = 'button button-again'
