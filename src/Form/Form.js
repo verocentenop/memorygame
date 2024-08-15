@@ -19,7 +19,7 @@ export const printForm = () => {
 
   const submitButton = document.createElement('button')
   submitButton.type = 'submit'
-  submitButton.textContent = 'Registrar'
+  submitButton.textContent = 'Jugar'
 
   form.append(label, input, submitButton)
   formContainer.append(form)
